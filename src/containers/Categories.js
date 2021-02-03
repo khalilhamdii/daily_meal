@@ -1,7 +1,15 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import Category from '../components/Category';
-/* eslint-disable react/prop-types */
+import categoriesBg from '../assets/categories-bg.jpg';
+
+const CategoriesDiv = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(${categoriesBg}) no-repeat;
+  background-size: auto, cover;
+`;
 const Categories = props => {
   const [categories, setCategories] = useState([]);
 
@@ -20,7 +28,7 @@ const Categories = props => {
 
   return (
     <>
-      <div className="py-5">
+      <CategoriesDiv className="py-5">
         <main className="container">
           <Link to="/" className="btn btn-link">
             Home
@@ -31,7 +39,7 @@ const Categories = props => {
             ))}
           </div>
         </main>
-      </div>
+      </CategoriesDiv>
     </>
   );
 };

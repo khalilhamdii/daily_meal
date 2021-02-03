@@ -1,7 +1,15 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import Meal from '../components/Meal';
-/* eslint-disable react/prop-types */
+import mealsBg from '../assets/meals-bg.jpg';
+
+const MealsDiv = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(${mealsBg}) no-repeat;
+  background-size: auto, cover;
+`;
 const Meals = props => {
   const [meals, setMeals] = useState([]);
   const category = 'Seafood';
@@ -20,7 +28,7 @@ const Meals = props => {
 
   return (
     <>
-      <div className="py-5">
+      <MealsDiv className="py-5">
         <main className="container">
           <Link to="/categories" className="btn btn-link">
             Categories
@@ -31,7 +39,7 @@ const Meals = props => {
             ))}
           </div>
         </main>
-      </div>
+      </MealsDiv>
     </>
   );
 };

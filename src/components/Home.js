@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import homeBg from '../assets/home_bg.jpg';
+import homeBg from '../assets/home-bg.jpg';
 
 const HomeDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -18,11 +18,7 @@ const Home = () => (
           A curated list of recipes for the best homemade meal and delicacies.
         </p>
         <hr className="my-4" />
-        <Link
-          to="/categories"
-          className="btn btn-lg text-white"
-          role="button"
-        >
+        <Link to="/categories" className="btn btn-lg orange" role="button">
           View Categories
         </Link>
       </div>

@@ -7,7 +7,7 @@ const Category = props => {
   const { category } = props;
   return (
     <div className="col-md-6 col-lg-4">
-      <div className="card mb-4">
+      <div className="card mb-4 bg-faded">
         <img
           src={category.strCategoryThumb}
           className="card-img-top"

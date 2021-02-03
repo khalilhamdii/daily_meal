@@ -5,3 +5,15 @@
 body {
   font-family: Montserrat, sans-serif;
 }
+
+.bg-faded {
+  background-color: hsla(0, 0%, 100%, 0.85);
+}
+
+.orange {
+  color: rgba(230, 167, 86, 1);
+}
+
+.orange-bg {
+  background-color: rgba(230, 167, 86, 1);
+}
