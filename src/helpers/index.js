@@ -1,8 +1,10 @@
+/* eslint-disable arrow-parens */
 import { CATEGORIES, AREAS } from '../constants/index';
 
 export const mealsStateToProps = (state) => {
   const { mealsReducer } = state;
-  console.log(mealsReducer);
+  // console.log(mealsReducer);
+  // console.log(state.filterReducer.filter);
   return { meals: mealsReducer.meals };
 };
 

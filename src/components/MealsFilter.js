@@ -3,12 +3,12 @@ import { AREAS, CATEGORIES } from '../constants';
 /* eslint-disable react/prop-types */
 
 function MealsFilter(props) {
-  const handleCatFilterChange = (target) => {
+  const handleCatFilterChange = target => {
     const filter = target.options[target.selectedIndex].text;
     props.handleCatFilterChange(filter);
   };
 
-  const handleAreaFilterChange = (target) => {
+  const handleAreaFilterChange = target => {
     const filter = target.options[target.selectedIndex].text;
     props.handleAreaFilterChange(filter);
   };
@@ -18,7 +18,8 @@ function MealsFilter(props) {
         FILTER MEALS :
       </span>
       <select
-        onChange={(e) => handleCatFilterChange(e.target)}
+        defaultValue="DEFAULT_CATEGORY"
+        onChange={e => handleCatFilterChange(e.target)}
         className="ml-2"
         style={{
           height: '45px',
@@ -26,15 +27,16 @@ function MealsFilter(props) {
           border: '1px solid #e8e8e8',
         }}
       >
-        <option key={`DEFAULT_CATEGORY`} value="" selected disabled>
+        <option key="DEFAULT_CATEGORY" value="Filter by category" disabled>
           Filter by category
         </option>
-        {CATEGORIES.map((category) => (
+        {CATEGORIES.map(category => (
           <option key={`${category}`}>{category}</option>
         ))}
       </select>
       <select
-        onChange={(e) => handleAreaFilterChange(e.target)}
+        defaultValue="DEFAULT_AREA"
+        onChange={e => handleAreaFilterChange(e.target)}
         className="ml-2"
         style={{
           height: '45px',
@@ -42,10 +44,10 @@ function MealsFilter(props) {
           border: '1px solid #e8e8e8',
         }}
       >
-        <option key={`DEFAULT_AREA`} value="" selected disabled>
+        <option key="DEFAULT_AREA" value="Filter by area" disabled>
           Filter by area
         </option>
-        {AREAS.map((area) => (
+        {AREAS.map(area => (
           <option key={`${area}`}>{area}</option>
         ))}
       </select>
