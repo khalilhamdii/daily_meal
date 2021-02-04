@@ -4,6 +4,7 @@ export const CHANGE_CATEGORY_FILTER = 'CHANGE_CATEGORY_FILTER';
 export const CHANGE_AREA_FILTER = 'CHANGE_AREA_FILTER';
 
 export const CATEGORIES = [
+  'All categories',
   'Beef',
   'Breakfast',
   'Chicken',
@@ -21,6 +22,7 @@ export const CATEGORIES = [
 ];
 
 export const AREAS = [
+  'All areas',
   'American',
   'British',
   'Canadian',

@@ -1,9 +1,9 @@
-import { CHANGE_FILTER } from '../constants/index';
+import { CHANGE_CATEGORY_FILTER, CHANGE_AREA_FILTER } from '../constants/index';
 
 const initialState = {
   filter: {
-    category: null,
-    area: null,
+    category: 'All categories',
+    area: 'All areas',
   },
 };
 
