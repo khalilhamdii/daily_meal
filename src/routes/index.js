@@ -7,7 +7,7 @@ import Categories from '../containers/Categories';
 import Meals from '../containers/Meals';
 import { CATEGORIES } from '../constants/index';
 import { addMeals } from '../actions/index';
-import mealsStateToHome from '../helpers/index';
+import mealsStateToProps from '../helpers/index';
 
 const Routes = props => {
   useEffect(() => {
@@ -41,4 +41,4 @@ const Routes = props => {
   );
 };
 
-export default connect(mealsStateToHome, { addMeals })(Routes);
+export default connect(mealsStateToProps, { addMeals })(Routes);
