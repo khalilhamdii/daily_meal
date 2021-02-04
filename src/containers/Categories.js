@@ -9,6 +9,7 @@ const CategoriesDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(${categoriesBg}) no-repeat;
   background-size: auto, cover;
+  min-height: 100vh;
 `;
 const Categories = props => {
   const [categories, setCategories] = useState([]);

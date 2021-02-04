@@ -9,6 +9,7 @@ const MealsDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(${mealsBg}) no-repeat;
   background-size: auto, cover;
+  min-height: 100vh;
 `;
 const Meals = props => {
   const [meals, setMeals] = useState([]);
