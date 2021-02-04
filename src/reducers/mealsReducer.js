@@ -1,4 +1,4 @@
-import ADD_MEALS from '../constants/index';
+import { ADD_MEALS } from '../constants/index';
 
 const initialState = {
   meals: [],

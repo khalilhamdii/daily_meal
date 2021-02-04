@@ -1,8 +1,8 @@
-const ADD_MEALS = 'ADD_MELS';
+export const ADD_MEALS = 'ADD_MEALS';
 
-const CHANGE_FILTER = 'CHANGE_FILTER';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
 
-const CATEGORIES = [
+export const CATEGORIES = [
   'Beef',
   'Breakfast',
   'Chicken',
@@ -19,7 +19,7 @@ const CATEGORIES = [
   'Vegetarian',
 ];
 
-const AREAS = [
+export const AREAS = [
   'American',
   'British',
   'Canadian',

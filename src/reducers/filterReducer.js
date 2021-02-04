@@ -1,4 +1,4 @@
-import CHANGE_FILTER from '../constants/index';
+import { CHANGE_FILTER } from '../constants/index';
 
 const initialState = {
   filter: {
