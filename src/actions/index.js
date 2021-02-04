@@ -1,11 +1,20 @@
-import { ADD_MEALS, CHANGE_FILTER } from '../constants/index';
+import {
+  ADD_MEALS,
+  CHANGE_CATEGORY_FILTER,
+  CHANGE_AREA_FILTER,
+} from '../constants/index';
 
-export const addMeals = meals => ({
+export const addMeals = (meals) => ({
   type: ADD_MEALS,
   payload: { meals },
 });
 
-export const changeFilter = filter => ({
-  type: CHANGE_FILTER,
+export const changeCategoryFilter = (filter) => ({
+  type: CHANGE_CATEGORY_FILTER,
+  payload: { filter },
+});
+
+export const changeFilter = (filter) => ({
+  type: CHANGE_AREA_FILTER,
   payload: { filter },
 });

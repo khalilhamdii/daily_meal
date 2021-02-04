@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import Meal from '../components/Meal';
 import mealsBg from '../assets/meals-bg.jpg';
 import mealsStateToProps from '../helpers/index';
-import { changeFilter } from '../actions/index';
+import { changeCategoryFilter, changeAreaFilter } from '../actions/index';
 
 const MealsDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -17,13 +17,19 @@ const MealsDiv = styled.div`
 `;
 const Meals = (props) => {
   const { meals } = props;
-  const handleFilterChange = (filter) => {
-    props.changeFilter(filter);
+  const handleCatFilterChange = (filter) => {
+    props.changeCategoryFilter(filter);
+  };
+  const handleAreaFilterChange = (filter) => {
+    props.changeAreaFilter(filter);
   };
   console.log(meals);
   return (
     <>
-      <MealsFilter handleFilterChange={handleFilterChange} />
+      <MealsFilter
+        handleCatFilterChange={handleCatFilterChange}
+        handleAreaFilterChange={handleAreaFilterChange}
+      />
       <MealsDiv className="py-5">
         <main className="container">
           <Link to="/categories" className="btn btn-link">
@@ -40,4 +46,7 @@ const Meals = (props) => {
   );
 };
 
-export default connect(mealsStateToProps, { changeFilter })(Meals);
+export default connect(mealsStateToProps, {
+  changeCategoryFilter,
+  changeAreaFilter,
+})(Meals);

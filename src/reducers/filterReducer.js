@@ -9,8 +9,17 @@ const initialState = {
 
 const filterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_FILTER: {
-      return { ...state, filter: action.payload.filter };
+    case CHANGE_CATEGORY_FILTER: {
+      return {
+        ...state,
+        filter: { ...state.filter, category: action.payload.filter },
+      };
+    }
+    case CHANGE_AREA_FILTER: {
+      return {
+        ...state,
+        filter: { ...state.filter, area: action.payload.filter },
+      };
     }
     default:
       return state;

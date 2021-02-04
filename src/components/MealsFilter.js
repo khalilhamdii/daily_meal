@@ -3,9 +3,14 @@ import { AREAS, CATEGORIES } from '../constants';
 /* eslint-disable react/prop-types */
 
 function MealsFilter(props) {
-  const handleFilterChange = (target) => {
+  const handleCatFilterChange = (target) => {
     const filter = target.options[target.selectedIndex].text;
-    props.handleFilterChange(filter);
+    props.handleCatFilterChange(filter);
+  };
+
+  const handleAreaFilterChange = (target) => {
+    const filter = target.options[target.selectedIndex].text;
+    props.handleAreaFilterChange(filter);
   };
   return (
     <div className="mb-4">
@@ -13,7 +18,7 @@ function MealsFilter(props) {
         FILTER MEALS :
       </span>
       <select
-        onChange={(e) => handleFilterChange(e.target)}
+        onChange={(e) => handleCatFilterChange(e.target)}
         className="ml-2"
         style={{
           height: '45px',
@@ -29,7 +34,7 @@ function MealsFilter(props) {
         ))}
       </select>
       <select
-        onChange={(e) => handleFilterChange(e.target)}
+        onChange={(e) => handleAreaFilterChange(e.target)}
         className="ml-2"
         style={{
           height: '45px',
