@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Category = props => {
   const { category } = props;
@@ -15,9 +15,9 @@ const Category = props => {
         />
         <div className="card-body">
           <h5 className="card-title">{category.strCategory}</h5>
-          <a href="/meals" className="btn btn-primary">
-            Go somewhere
-          </a>
+          <Link to="/meals" className="btn btn-link">
+            View meals
+          </Link>
         </div>
       </div>
     </div>
