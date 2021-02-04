@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Meal from '../components/Meal';
@@ -11,21 +12,29 @@ const MealsDiv = styled.div`
   background-size: auto, cover;
   min-height: 100vh;
 `;
-const Meals = props => {
-  const [meals, setMeals] = useState([]);
-  const category = 'Seafood';
-  useEffect(() => {
-    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
-    fetch(url)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Network response was not ok.');
-      })
-      .then(response => setMeals(response.meals))
-      .catch(() => props.history.push('/'));
-  }, []);
+const Meals = (props) => {
+  // const [meals, setMeals] = useState([]);
+  // useEffect(() => {
+  //   const urls = [];
+  //   CATEGORIES.forEach((category) =>
+  //     urls.push(
+  //       `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+  //     )
+  //   );
+
+  //   Promise.all(
+  //     urls.map((url) =>
+  //       fetch(url)
+  //         .then((response) => response.json())
+  //         .catch((err) => console.error(err))
+  //     )
+  //   )
+  //     .then((categories) =>
+  //       categories.map((category) => category.meals).flat(1)
+  //     )
+  //     .then((meals) => setMeals(meals))
+  //     .catch(() => props.history.push('/'));
+  // }, []);
 
   return (
     <>
@@ -35,7 +44,7 @@ const Meals = props => {
             Categories
           </Link>
           <div className="row">
-            {meals.map(meal => (
+            {meals.map((meal) => (
               <Meal key={meal.idMeal} meal={meal} />
             ))}
           </div>
