@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import addMeals from '../actions/index';
+import { addMeals } from '../actions/index';
 import mealsStateToHome from '../helpers/index';
+import { CATEGORIES } from '../constants/index';
 import homeBg from '../assets/home-bg.jpg';
 
 const HomeDiv = styled.div`
@@ -12,29 +14,25 @@ const HomeDiv = styled.div`
   background-size: auto, cover;
 `;
 
-const Home = (props) => {
-  const meals = props.meals;
+const Home = props => {
+  const { meals } = props;
+  console.log(meals);
   useEffect(() => {
     if (meals.length === 0) {
+      console.log('Fetching');
       const urls = [];
-      CATEGORIES.forEach((category) =>
-        urls.push(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
-        )
-      );
+      CATEGORIES.forEach(category => urls.push(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`,
+      ));
 
       Promise.all(
-        urls.map((url) =>
-          fetch(url)
-            .then((response) => response.json())
-            .catch((err) => console.error(err))
-        )
+        urls.map(url => fetch(url)
+          .then(response => response.json())
+          .catch(err => console.error(err))),
       )
-        .then((categories) =>
-          categories.map((category) => category.meals).flat(1)
-        )
-        .then((meals) => props.addMeals(meals))
-        .catch((err) => console.log(err));
+        .then(categories => categories.map(category => category.meals).flat(1))
+        .then(meals => props.addMeals(meals))
+        .catch(err => console.log(err));
     }
   }, []);
   return (

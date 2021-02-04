@@ -1,4 +1,7 @@
-export const mealsStateToHome = (state) => {
+const mealsStateToHome = state => {
   const { mealsReducer } = state;
-  return mealsReducer.meals;
+  console.log(mealsReducer);
+  return { meals: mealsReducer.meals };
 };
+
+export default mealsStateToHome;
