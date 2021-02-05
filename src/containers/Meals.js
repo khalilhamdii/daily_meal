@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import Meal from '../components/Meal';
 import mealsBg from '../assets/meals-bg.jpg';
-import { mealsStateToProps } from '../helpers/index';
+import { filtredMealsToProps } from '../helpers/index';
 import { changeCategoryFilter, changeAreaFilter } from '../actions/index';
 import MealsFilter from '../components/MealsFilter';
 
@@ -24,7 +24,7 @@ const Meals = (props) => {
   const handleAreaFilterChange = (filter) => {
     props.changeAreaFilter(filter);
   };
-  console.log(meals);
+  // console.log(meals);
   return (
     <>
       <MealsDiv className="py-5">
@@ -47,7 +47,7 @@ const Meals = (props) => {
   );
 };
 
-export default connect(mealsStateToProps, {
+export default connect(filtredMealsToProps, {
   changeCategoryFilter,
   changeAreaFilter,
 })(Meals);

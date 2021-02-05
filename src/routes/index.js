@@ -13,7 +13,7 @@ import { mealsStateToProps } from '../helpers/index';
 const Routes = (props) => {
   useEffect(() => {
     const { meals } = props;
-    console.log(meals);
+    // console.log(meals);
     if (meals.length === 0) {
       console.log('Fetching');
       const urls = [];

@@ -13,7 +13,7 @@ function MealsFilter(props) {
     props.handleAreaFilterChange(filter);
   };
   return (
-    <div className="mb-4">
+    <div className="mb-4 text-center">
       <span className="ml-4" style={{ color: 'var(--gray)' }}>
         FILTER MEALS :
       </span>
