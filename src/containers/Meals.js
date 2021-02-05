@@ -9,6 +9,7 @@ import mealsBg from '../assets/meals-bg.jpg';
 import { filtredMealsToProps } from '../helpers/index';
 import { changeCategoryFilter, changeAreaFilter } from '../actions/index';
 import MealsFilter from '../components/MealsFilter';
+import Nav from '../components/Nav';
 
 const MealsDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -27,6 +28,7 @@ const Meals = (props) => {
   // console.log(meals);
   return (
     <>
+      <Nav />
       <MealsDiv className="py-5">
         <main className="container">
           <MealsFilter

@@ -31,38 +31,6 @@ export const filtredMealsToProps = (state) => {
       .filter((meal) => meal.strCategory === filter.category)
       .filter((meal) => meal.strArea === filter.area);
   }
-  // const filterSwitch = (item) => {
-  //   switch (filter.category) {
-  //     case item === 'All categories':
-  //       console.log('1');
-  //       filtredMeals = meals;
-  //       break;
-  //     case item && CATEGORIES.includes(item):
-  //       console.log('2');
-  //       filtredMeals = meals.filter((meal) => meal.strCategory === item);
-  //       break;
-
-  //     default:
-  //       console.log('3');
-  //       filtredMeals = meals;
-  //   }
-  //   switch (filter.area) {
-  //     case item === 'All areas':
-  //       console.log('4');
-  //       filtredMeals = meals;
-  //       break;
-  //     case item && AREAS.includes(item):
-  //       console.log('5');
-  //       filtredMeals = meals.filter((meal) => meal.strArea === item);
-  //       break;
-
-  //     default:
-  //       console.log('6');
-  //       filtredMeals = meals;
-  //   }
-  // };
-  // console.log(switchArr);
-  // switchArr.forEach((item) => filterSwitch(item));
 
   return { meals: filtredMeals };
 };

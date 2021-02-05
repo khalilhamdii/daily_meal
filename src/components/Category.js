@@ -13,11 +13,13 @@ const Category = props => {
           className="card-img-top"
           alt={`${category.strCategory}`}
         />
-        <div className="card-body">
-          <h5 className="card-title">{category.strCategory}</h5>
-          <Link to="/meals" className="btn btn-link">
-            View meals
-          </Link>
+        <div
+          className="card-body"
+          style={{ backgroundColor: 'rgba(230, 167, 86, 0.95)' }}
+        >
+          <h5 className="card-title">
+            <Link to="/meals">{category.strCategory}</Link>
+          </h5>
         </div>
       </div>
     </div>
