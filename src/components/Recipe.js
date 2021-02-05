@@ -16,19 +16,23 @@ const Recipe = (props) => {
   } = props;
 
   const meal = meals.filter((meal) => meal.idMeal === id)[0];
+  const instructions = meal.strInstructions
+    .replace('\r\n', '')
+    .split('.')
+    .filter((i) => i);
   const RecipeDiv = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
       url(${meal.strMealThumb}) no-repeat;
     background-size: auto, cover;
     min-height: 100vh;
   `;
-  console.log(meal);
   return (
     <>
       <Nav />
       <RecipeDiv>
         <div className="container text-white">
-          <Link to="/meals" className="btn btn-link py-4">
+          <Link to="/meals" className="btn text-white my-5">
+            <i className="fa fa-reply mr-2" />
             Back to meals
           </Link>
           <div>
@@ -47,6 +51,13 @@ const Recipe = (props) => {
                 </div>
                 <div className="col-sm-12 col-lg-7">
                   <h5 className="mb-2">Preparation Instructions</h5>
+                  <ol>
+                    {instructions.map((inst) => (
+                      <li key={inst} className="mb-2 pl-2">
+                        {`${inst}.`}
+                      </li>
+                    ))}
+                  </ol>
                 </div>
               </div>
             </div>

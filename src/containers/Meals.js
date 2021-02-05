@@ -35,8 +35,9 @@ const Meals = (props) => {
             handleCatFilterChange={handleCatFilterChange}
             handleAreaFilterChange={handleAreaFilterChange}
           />
-          <Link to="/categories" className="btn btn-link my-5">
-            Categories
+          <Link to="/" className="btn text-white my-5">
+            <i className="fa fa-reply mr-2" />
+            Back to Home
           </Link>
           <div className="row">
             {meals.map((meal) => (
