@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable arrow-parens */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import { Link } from 'react-router-dom';
-
-const Meal = props => {
+const Meal = (props) => {
   const { meal } = props;
   return (
     <div className="col-md-6 col-lg-4">
@@ -14,10 +14,9 @@ const Meal = props => {
           alt={`${meal.strMeal}`}
         />
         <div className="card-body">
-          <h5 className="card-title text-truncate">{meal.strMeal}</h5>
-          <a href="/meals" className="btn btn-primary">
-            View meal
-          </a>
+          <h5 className="card-title text-truncate">
+            <Link to={`/meals/${meal.idMeal}`}>{meal.strMeal}</Link>
+          </h5>
         </div>
       </div>
     </div>

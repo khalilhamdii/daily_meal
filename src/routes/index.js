@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Home from '../components/Home';
 import Categories from '../containers/Categories';
 import Meals from '../containers/Meals';
+import Recipe from '../components/Recipe';
 import { CATEGORIES } from '../constants/index';
 import { addMeals } from '../actions/index';
 import { mealsStateToProps } from '../helpers/index';
@@ -52,6 +53,7 @@ const Routes = (props) => {
         <Route path="/" exact component={Home} />
         <Route path="/categories" exact component={Categories} />
         <Route path="/meals" exact component={Meals} />
+        <Route path="/meals/:id" exact component={Recipe} />
       </Switch>
     </Router>
   );
