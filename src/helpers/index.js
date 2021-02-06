@@ -1,4 +1,6 @@
 /* eslint-disable arrow-parens */
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 
 export const mealsStateToProps = (state) => {
   const { mealsReducer } = state;
@@ -31,4 +33,30 @@ export const filtredMealsToProps = (state) => {
   }
 
   return { meals: filtredMeals, filter };
+};
+
+export const ingredientAndMesue = (obj) => {
+  const list = [];
+  let tmp = '';
+  const ingredients = Object.keys(obj)
+    .map((key) => {
+      if (/strIngredient/.test(key)) {
+        return obj[key];
+      }
+    })
+    .filter((i) => i);
+
+  const mesures = Object.keys(obj)
+    .map((key) => {
+      if (/strMeasure/.test(key)) {
+        return obj[key];
+      }
+    })
+    .filter((i) => i);
+
+  for (let i = 0; i < ingredients.length; i += 1) {
+    tmp = `${ingredients[i]} : ${mesures[i]}`;
+    list.push(tmp);
+  }
+  return list;
 };

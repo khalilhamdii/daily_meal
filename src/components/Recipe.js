@@ -4,7 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { mealsStateToProps } from '../helpers/index';
+import { mealsStateToProps, ingredientAndMesue } from '../helpers/index';
 import Nav from './Nav';
 
 const Recipe = (props) => {
@@ -20,6 +20,7 @@ const Recipe = (props) => {
     .replace('\r\n', '')
     .split('.')
     .filter((i) => i);
+  const ingredients = ingredientAndMesue(meal);
   const RecipeDiv = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
       url(${meal.strMealThumb}) no-repeat;
@@ -45,8 +46,13 @@ const Recipe = (props) => {
             <div className="container py-5">
               <div className="row">
                 <div className="col-sm-12 col-lg-3">
-                  <ul className="list-group">
-                    <h5 className="mb-2">Ingredients</h5>
+                  <h5 className="mb-2">Ingredients</h5>
+                  <ul>
+                    {ingredients.map((ing) => (
+                      <li key={ing} className="mb-2 pl-2">
+                        {ing}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="col-sm-12 col-lg-7">
