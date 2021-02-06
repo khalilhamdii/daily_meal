@@ -14,9 +14,7 @@ function MealsFilter(props) {
   };
   return (
     <div className="mb-4 text-center">
-      <span className="ml-4" style={{ color: 'var(--gray)' }}>
-        FILTER MEALS :
-      </span>
+      <span className="ml-4 text-white">FILTER MEALS :</span>
       <select
         defaultValue="DEFAULT_CATEGORY"
         onChange={e => handleCatFilterChange(e.target)}

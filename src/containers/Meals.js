@@ -35,7 +35,7 @@ const Meals = (props) => {
             handleCatFilterChange={handleCatFilterChange}
             handleAreaFilterChange={handleAreaFilterChange}
           />
-          <Link to="/" className="btn text-white my-5">
+          <Link to="/" className="btn back-link my-5">
             <i className="fa fa-reply mr-2" />
             Back to Home
           </Link>

@@ -31,7 +31,7 @@ const Recipe = (props) => {
       <Nav />
       <RecipeDiv>
         <div className="container text-white">
-          <Link to="/meals" className="btn text-white my-5">
+          <Link to="/meals" className="btn back-link my-5">
             <i className="fa fa-reply mr-2" />
             Back to meals
           </Link>
