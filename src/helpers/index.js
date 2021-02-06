@@ -2,7 +2,6 @@
 
 export const mealsStateToProps = (state) => {
   const { mealsReducer } = state;
-  // console.log(state.filterReducer.filter);
   return { meals: mealsReducer.meals };
 };
 
@@ -10,7 +9,6 @@ export const filtredMealsToProps = (state) => {
   const { meals } = state.mealsReducer;
   const { filter } = state.filterReducer;
   let filtredMeals = [];
-  console.log(filter);
   if (filter.category === 'All categories' && filter.area === 'All areas') {
     filtredMeals = meals;
   } else if (
@@ -32,5 +30,5 @@ export const filtredMealsToProps = (state) => {
       .filter((meal) => meal.strArea === filter.area);
   }
 
-  return { meals: filtredMeals };
+  return { meals: filtredMeals, filter };
 };

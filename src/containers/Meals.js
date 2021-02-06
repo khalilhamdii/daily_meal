@@ -18,20 +18,21 @@ const MealsDiv = styled.div`
   min-height: 100vh;
 `;
 const Meals = (props) => {
-  const { meals } = props;
+  const { meals, filter } = props;
+  console.log(filter);
   const handleCatFilterChange = (filter) => {
     props.changeCategoryFilter(filter);
   };
   const handleAreaFilterChange = (filter) => {
     props.changeAreaFilter(filter);
   };
-  // console.log(meals);
   return (
     <>
       <Nav />
       <MealsDiv className="py-5">
         <main className="container">
           <MealsFilter
+            filter={filter}
             handleCatFilterChange={handleCatFilterChange}
             handleAreaFilterChange={handleAreaFilterChange}
           />
