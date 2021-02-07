@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Nav from '../components/Nav';
 
-describe('rendered Home', () => {
+describe('rendered Nav', () => {
   render(<Nav />);
 
   test('has Text element', () => {

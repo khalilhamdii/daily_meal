@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Meal from '../components/Meal';
 
-describe('rendered Home', () => {
+describe('rendered Meal', () => {
   const meal = {
     idMeal: 1,
     strMeal: 'meal',
