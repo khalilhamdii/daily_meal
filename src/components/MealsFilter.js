@@ -4,7 +4,6 @@ import { AREAS, CATEGORIES } from '../constants';
 /* eslint-disable arrow-parens */
 function MealsFilter(props) {
   const { filter } = props;
-  console.log(filter);
   const handleCatFilterChange = (target) => {
     const filter = target.options[target.selectedIndex].text;
     props.handleCatFilterChange(filter);

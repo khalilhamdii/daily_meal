@@ -6,7 +6,7 @@ function Nav() {
     <nav className="navbar navbar-light navbar-expand-md navigation-clean-button">
       <div className="container">
         <a className="navbar-brand" href="/">
-          Daily meals
+          Daily meal
         </a>
         <button
           data-toggle="collapse"

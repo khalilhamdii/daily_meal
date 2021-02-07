@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots renders Home correctly 1`] = `
+<div
+  className="sc-bdfBwQ IqGYf vw-100 vh-100 primary-color d-flex align-items-center justify-content-center text-white"
+>
+  <div
+    className="jumbotron jumbotron-fluid bg-transparent"
+  >
+    <div
+      className="container secondary-color"
+    >
+      <h1
+        className="display-4"
+      >
+        Daily meal
+      </h1>
+      <p
+        className="lead"
+      >
+        A curated list of recipes for the best homemade meal and delicacies.
+      </p>
+      <hr
+        className="my-4"
+      />
+      <a
+        className="view-meals"
+        href="/meals"
+      >
+        <h4>
+          View meals
+        </h4>
+      </a>
+    </div>
+  </div>
+</div>
+`;

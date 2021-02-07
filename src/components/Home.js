@@ -19,9 +19,9 @@ const Home = () => (
           A curated list of recipes for the best homemade meal and delicacies.
         </p>
         <hr className="my-4" />
-        <Link to="/meals" className="view-meals" role="button">
+        <a href="/meals" className="view-meals">
           <h4>View meals</h4>
-        </Link>
+        </a>
       </div>
     </div>
   </HomeDiv>

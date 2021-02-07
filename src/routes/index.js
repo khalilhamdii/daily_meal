@@ -15,7 +15,7 @@ const Routes = (props) => {
     const { meals } = props;
     // console.log(meals);
     if (meals.length === 0) {
-      console.log('Fetching');
+      console.log('Fetching...');
       const urls = [];
 
       CATEGORIES.forEach((category) => (category !== 'All categories'

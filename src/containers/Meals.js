@@ -19,7 +19,7 @@ const MealsDiv = styled.div`
 `;
 const Meals = (props) => {
   const { meals, filter } = props;
-  console.log(filter);
+  console.log(meals);
   const handleCatFilterChange = (filter) => {
     props.changeCategoryFilter(filter);
   };
