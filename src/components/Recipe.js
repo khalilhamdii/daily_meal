@@ -7,6 +7,13 @@ import styled from 'styled-components';
 import { mealsStateToProps, ingredientAndMesue } from '../helpers/index';
 import Nav from './Nav';
 
+const RecipeDiv = styled.div`
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(${(props) => props.inputColor}) no-repeat;
+  background-size: auto, cover;
+  min-height: 100vh;
+`;
+
 const Recipe = (props) => {
   const { meals } = props;
   const {
@@ -21,16 +28,11 @@ const Recipe = (props) => {
     .split('.')
     .filter((i) => i);
   const ingredients = ingredientAndMesue(meal);
-  const RecipeDiv = styled.div`
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(${meal.strMealThumb}) no-repeat;
-    background-size: auto, cover;
-    min-height: 100vh;
-  `;
+
   return (
     <>
       <Nav />
-      <RecipeDiv>
+      <RecipeDiv url={meal.strMealThumb}>
         <div className="container text-white">
           <Link to="/meals" className="btn back-link my-5">
             <i className="fa fa-reply mr-2" />
