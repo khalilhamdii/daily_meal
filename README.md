@@ -24,7 +24,7 @@
 
 ## Preview
 
-![img](./screenshots/1.PNG)
+![preview](./preview/preview.gif)
 
 ## Built With 🛠
 
