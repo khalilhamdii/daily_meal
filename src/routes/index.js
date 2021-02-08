@@ -13,9 +13,7 @@ import { mealsStateToProps } from '../helpers/index';
 const Routes = (props) => {
   useEffect(() => {
     const { meals } = props;
-    // console.log(meals);
     if (meals.length === 0) {
-      console.log('Fetching...');
       const urls = [];
 
       CATEGORIES.forEach((category) => (category !== 'All categories'
@@ -27,7 +25,7 @@ const Routes = (props) => {
       Promise.all(
         urls.map((url) => fetch(url)
           .then((response) => response.json())
-          .catch((err) => console.error(err))),
+          .catch((err) => err)),
       )
         .then((categories) => categories.map((category) => category.meals).flat(1))
         .then((catMeals) => catMeals.map((meal) => meal.idMeal))
@@ -37,13 +35,13 @@ const Routes = (props) => {
           )
             .then((response) => response.json())
             .then((json) => json.meals)
-            .catch((err) => console.error(err))),
+            .catch((err) => err)),
         ))
         .then((meals) => {
           const result = meals.flat(1);
           props.addMeals(result);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => err);
     }
   }, []);
   return (
