@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-[Live demo](https://react-math-magicians.herokuapp.com/)
+[Live demo](https://daily-meal.herokuapp.com/)
 
 ## Preview
 
