@@ -1,17 +1,17 @@
 import React from 'react';
 // import { render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import App from '../components/App';
-import Nav from '../components/Nav';
-import Home from '../components/Home';
-import TestRenderer from 'react-test-renderer';
-import rootReducer from '../reducers/index';
+import { renderer, TestRenderer } from 'react-test-renderer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { initialState } from './storeStateForTests';
-const store = createStore(rootReducer, initialState);
+import App from '../components/App';
+import Nav from '../components/Nav';
+import Home from '../components/Home';
+import rootReducer from '../reducers/index';
+import initialState from './storeStateForTests';
 import Meals from '../containers/Meals';
+
+const store = createStore(rootReducer, initialState);
 const { act } = TestRenderer;
 describe('Snapshots', () => {
   it('renders App correctly', () => {
@@ -40,7 +40,7 @@ describe('Snapshots', () => {
             <Router>
               <Meals />
             </Router>
-          </Provider>
+          </Provider>,
         )
         .toJSON();
       expect(tree).toMatchSnapshot();

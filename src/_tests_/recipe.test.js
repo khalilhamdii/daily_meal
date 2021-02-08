@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import rootReducer from '../reducers/index';
 
 import Recipe from '../components/Recipe';
-import { initialState } from './storeStateForTests';
+import initialState from './storeStateForTests';
 
 const store = createStore(rootReducer, initialState);
 describe('rendered Recipe', () => {
@@ -19,7 +19,7 @@ describe('rendered Recipe', () => {
       <Router>
         <Recipe match={match} />
       </Router>
-    </Provider>
+    </Provider>,
   );
 
   test('has Text element', () => {

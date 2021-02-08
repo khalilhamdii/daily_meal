@@ -8,7 +8,7 @@ describe('rendered Home', () => {
 
   test('has Text element', () => {
     const element = screen.getByText(
-      /A curated list of recipes for the best homemade meal and delicacies./i
+      /A curated list of recipes for the best homemade meal and delicacies./i,
     );
     expect(element).toBeInTheDocument();
   });

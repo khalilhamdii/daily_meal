@@ -9,7 +9,7 @@ import Nav from './Nav';
 
 const RecipeDiv = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(${(props) => props.inputColor}) no-repeat;
+    url(${(props) => props.url}) no-repeat;
   background-size: auto, cover;
   min-height: 100vh;
 `;

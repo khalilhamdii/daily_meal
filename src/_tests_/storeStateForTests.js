@@ -1,4 +1,4 @@
-export const initialState = {
+const initialState = {
   mealsReducer: {
     meals: [
       {
@@ -97,3 +97,5 @@ export const initialState = {
     ],
   },
 };
+
+export default initialState;
