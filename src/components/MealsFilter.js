@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { AREAS, CATEGORIES } from '../constants';
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 function MealsFilter(props) {
   const { filter } = props;
@@ -55,5 +55,23 @@ function MealsFilter(props) {
     </div>
   );
 }
+
+MealsFilter.propTypes = {
+  filter: PropTypes.shape({
+    category: PropTypes.string,
+    area: PropTypes.string,
+  }),
+  handleCatFilterChange: PropTypes.func,
+  handleAreaFilterChange: PropTypes.func,
+};
+
+MealsFilter.defaultProps = {
+  filter: {
+    category: 'All categories',
+    area: 'All areas',
+  },
+  handleCatFilterChange: (target) => target,
+  handleAreaFilterChange: (target) => target,
+};
 
 export default MealsFilter;

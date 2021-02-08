@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Home from '../components/Home';
@@ -13,6 +13,7 @@ import { mealsStateToProps } from '../helpers/index';
 const Routes = (props) => {
   useEffect(() => {
     const { meals } = props;
+    console.log(Object.keys(meals));
     if (meals.length === 0) {
       const urls = [];
 
@@ -53,6 +54,27 @@ const Routes = (props) => {
       </Switch>
     </BrowserRouter>
   );
+};
+
+Routes.propTypes = {
+  meals: PropTypes.shape([
+    {
+      idMeal: PropTypes.string,
+      strMeal: PropTypes.string,
+      strCategory: PropTypes.string,
+      strArea: PropTypes.string,
+      strMealThumb: PropTypes.string,
+    },
+  ]),
+  addMeals: PropTypes.func,
+};
+
+Routes.defaultProps = {
+  meals: {},
+  addMeals: (meals) => ({
+    type: 'ADD_MEALS',
+    payload: { meals },
+  }),
 };
 
 export default connect(mealsStateToProps, { addMeals })(Routes);

@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -74,6 +74,26 @@ const Recipe = (props) => {
       </RecipeDiv>
     </>
   );
+};
+
+Recipe.propTypes = {
+  meals: PropTypes.shape([
+    {
+      idMeal: PropTypes.string,
+      strMeal: PropTypes.string,
+      strCategory: PropTypes.string,
+      strArea: PropTypes.string,
+      strMealThumb: PropTypes.string,
+    },
+  ]),
+  match: PropTypes.shape({ params: PropTypes.shape({ id: PropTypes.string }) }),
+};
+
+Recipe.defaultProps = {
+  meals: [],
+  match: {
+    params: { id: '52772' },
+  },
 };
 
 export default connect(mealsStateToProps)(Recipe);

@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -48,6 +48,40 @@ const Meals = (props) => {
       </MealsDiv>
     </>
   );
+};
+
+Meals.propTypes = {
+  meals: PropTypes.shape([
+    {
+      idMeal: PropTypes.string,
+      strMeal: PropTypes.string,
+      strCategory: PropTypes.string,
+      strArea: PropTypes.string,
+      strMealThumb: PropTypes.string,
+    },
+  ]),
+  filter: PropTypes.shape({
+    category: PropTypes.string,
+    area: PropTypes.string,
+  }),
+  changeCategoryFilter: PropTypes.func,
+  changeAreaFilter: PropTypes.func,
+};
+
+Meals.defaultProps = {
+  meals: [],
+  filter: {
+    category: 'All categories',
+    area: 'All areas',
+  },
+  changeCategoryFilter: (filter) => ({
+    type: 'CHANGE_CATEGORY_FILTER',
+    payload: { filter },
+  }),
+  changeAreaFilter: (filter) => ({
+    type: 'CHANGE_AREA_FILTER',
+    payload: { filter },
+  }),
 };
 
 export default connect(filtredMealsToProps, {

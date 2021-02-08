@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Meal = (props) => {
   const { meal } = props;
@@ -31,6 +31,27 @@ const Meal = (props) => {
       </div>
     </div>
   );
+};
+
+Meal.propTypes = {
+  meal: PropTypes.shape({
+    idMeal: PropTypes.string,
+    strMeal: PropTypes.string,
+    strCategory: PropTypes.string,
+    strArea: PropTypes.string,
+    strMealThumb: PropTypes.string,
+  }),
+};
+
+Meal.defaultProps = {
+  meal: {
+    idMeal: '52772',
+    strMeal: 'Teriyaki Chicken Casserole',
+    strCategory: 'Chicken',
+    strArea: 'Japanese',
+    strMealThumb:
+      'https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg',
+  },
 };
 
 export default Meal;

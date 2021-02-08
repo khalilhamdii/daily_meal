@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React from 'react';
 import { createStore } from 'redux';
