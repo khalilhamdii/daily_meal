@@ -28,6 +28,7 @@ exports[`Snapshots renders Home correctly 1`] = `
       <a
         className="view-meals"
         href="/meals"
+        onClick={[Function]}
       >
         <h4>
           View meals

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Meal from '../components/Meal';
 
@@ -12,9 +12,9 @@ describe('rendered Meal', () => {
     strArea: 'area',
   };
   render(
-    <Router>
+    <BrowserRouter>
       <Meal meal={meal} />
-    </Router>,
+    </BrowserRouter>,
   );
 
   test('has Text element', () => {

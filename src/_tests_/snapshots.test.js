@@ -1,9 +1,8 @@
 import React from 'react';
-// import { render } from '@testing-library/react';
-import { renderer, TestRenderer } from 'react-test-renderer';
+import TestRenderer from 'react-test-renderer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from '../components/App';
 import Nav from '../components/Nav';
 import Home from '../components/Home';
@@ -17,32 +16,34 @@ describe('Snapshots', () => {
   it('renders App correctly', () => {
     let tree;
     act(() => {
-      tree = renderer.create(<App />).toJSON();
+      tree = TestRenderer.create(<App />).toJSON();
     });
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders Home correctly', () => {
-    const tree = renderer.create(<Home />).toJSON();
+    const tree = TestRenderer.create(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>,
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders Nav correctly', () => {
-    const tree = renderer.create(<Nav />).toJSON();
+    const tree = TestRenderer.create(<Nav />).toJSON();
     expect(tree).toMatchSnapshot();
   });
   it('renders Meals correctly', () => {
     act(() => {
-      const tree = renderer
-        .create(
-          <Provider store={store}>
-            <Router>
-              <Meals />
-            </Router>
-          </Provider>,
-        )
-        .toJSON();
+      const tree = TestRenderer.create(
+        <Provider store={store}>
+          <BrowserRouter>
+            <Meals />
+          </BrowserRouter>
+        </Provider>,
+      ).toJSON();
       expect(tree).toMatchSnapshot();
     });
   });

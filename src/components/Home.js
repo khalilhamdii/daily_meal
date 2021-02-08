@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import homeBg from '../assets/home-bg.jpg';
@@ -18,9 +19,9 @@ const Home = () => (
           A curated list of recipes for the best homemade meal and delicacies.
         </p>
         <hr className="my-4" />
-        <a href="/meals" className="view-meals">
+        <Link to="/meals" className="view-meals">
           <h4>View meals</h4>
-        </a>
+        </Link>
       </div>
     </div>
   </HomeDiv>

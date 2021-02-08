@@ -1,10 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Home from '../components/Home';
 
 describe('rendered Home', () => {
-  render(<Home />);
+  render(
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>,
+  );
 
   test('has Text element', () => {
     const element = screen.getByText(

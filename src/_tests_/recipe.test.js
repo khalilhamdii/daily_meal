@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import rootReducer from '../reducers/index';
 
 import Recipe from '../components/Recipe';
@@ -16,9 +16,9 @@ describe('rendered Recipe', () => {
   };
   render(
     <Provider store={store}>
-      <Router>
+      <BrowserRouter>
         <Recipe match={match} />
-      </Router>
+      </BrowserRouter>
     </Provider>,
   );
 

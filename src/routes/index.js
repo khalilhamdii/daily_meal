@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Home from '../components/Home';
 import Meals from '../containers/Meals';
@@ -45,13 +45,13 @@ const Routes = (props) => {
     }
   }, []);
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/meals" exact component={Meals} />
         <Route path="/meals/:id" exact component={Recipe} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 };
 
