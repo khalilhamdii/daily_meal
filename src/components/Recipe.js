@@ -47,8 +47,13 @@ const Recipe = (props) => {
             </div>
             <div className="container py-5">
               <div className="row">
+                <img
+                  className="col-sm-12 col-lg-7 mb-5"
+                  src={meal.strMealThumb}
+                  alt={meal.strMeal}
+                />
                 <div className="col-sm-12 col-lg-3">
-                  <h5 className="mb-2">Ingredients</h5>
+                  <h5 className="my-4">Ingredients</h5>
                   <ul>
                     {ingredients.map((ing) => (
                       <li key={ing} className="mb-2 pl-2">
@@ -57,16 +62,16 @@ const Recipe = (props) => {
                     ))}
                   </ul>
                 </div>
-                <div className="col-sm-12 col-lg-7">
-                  <h5 className="mb-2">Preparation Instructions</h5>
-                  <ol>
-                    {instructions.map((inst) => (
-                      <li key={inst} className="mb-2 pl-2">
-                        {`${inst}.`}
-                      </li>
-                    ))}
-                  </ol>
-                </div>
+              </div>
+              <div className="d-flex flex-column mt-5">
+                <h5 className="my-4">Preparation Instructions</h5>
+                <ol>
+                  {instructions.map((inst) => (
+                    <li key={inst} className="mb-2 pl-2">
+                      {`${inst}.`}
+                    </li>
+                  ))}
+                </ol>
               </div>
             </div>
           </div>
