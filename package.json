@@ -49,7 +49,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --detectOpenHandles ",
+    "test": "react-scripts test --detectOpenHandles",
     "eject": "react-scripts eject",
     "lint": "eslint --fix ."
   },

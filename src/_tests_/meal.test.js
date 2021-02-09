@@ -6,7 +6,7 @@ import Meal from '../components/Meal';
 
 describe('rendered Meal', () => {
   const meal = {
-    idMeal: 1,
+    idMeal: '1',
     strMeal: 'meal',
     strCategory: 'category',
     strArea: 'area',
@@ -14,7 +14,7 @@ describe('rendered Meal', () => {
   render(
     <BrowserRouter>
       <Meal meal={meal} />
-    </BrowserRouter>,
+    </BrowserRouter>
   );
 
   test('has Text element', () => {
