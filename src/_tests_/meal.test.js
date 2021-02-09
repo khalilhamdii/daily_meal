@@ -14,7 +14,7 @@ describe('rendered Meal', () => {
   render(
     <BrowserRouter>
       <Meal meal={meal} />
-    </BrowserRouter>
+    </BrowserRouter>,
   );
 
   test('has Text element', () => {
