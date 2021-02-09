@@ -1,0 +1,35 @@
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.bg-faded {
+  background-color: hsla(0, 0%, 100%, 0.85);
+}
+
+.orange-bg {
+  background-color: rgba(230, 167, 86, 1);
+}
+
+.view-meals {
+  color: rgba(230, 167, 86, 1);
+  text-decoration: none;
+}
+
+.view-meals:hover,
+.view-meals:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.back-link {
+  color: white;
+}
+
+.back-link:hover,
+.back-link:focus {
+  color: rgba(230, 167, 86, 1);
+}

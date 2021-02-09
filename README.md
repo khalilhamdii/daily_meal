@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# React & Redux capstone project : Daily meal
 
-## Available Scripts
+![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
-In the project directory, you can run:
+## Description
 
-### `yarn start`
+> Daily meal is a React & Redux web app. It's based on a catalog of statistics. It contains a browsable list of meals that you can filter by category or area and access to the recipe of one meal... The data is retrieved from [Meals DB](https://www.themealdb.com/api.php) and then stored in the Redux store.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Library Directory 📙
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+| Contents                    |
+| --------------------------- |
+| [Live Demo](#live-demo)     |
+| [Preview](#preview)         |
+| [Built With](#built-with-🛠) |
+| [Setup](#setup-⏳)          |
+| [Testing](#testing-⚙️)      |
+| [Authors](#authors)         |
+| [License](#license)         |
 
-### `yarn test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Live demo](https://daily-meal.herokuapp.com/)
 
-### `yarn build`
+## Preview
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![preview](./preview/preview.gif)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Built With 🛠
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+- React.js
+- Redux
+- Node.js
+- ES6
+- Bootstrap
+- HTML
+- CSS
+```
 
-### `yarn eject`
+## Setup ⏳
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> Follow these steps to setup this web application locally :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. - [ ] Open your `Terminal`.
+2. - [ ] Navigate to the directory where you will like to install the repo by running `cd FOLDER-NAME`
+3. - [ ] Run `git clone git@github.com:khalilhamdii/daily_meal.git` in the terminal to download.
+4. - [ ] Run `cd daily_meal` to enter directory.
+5. - [ ] Run `npm install` to install node packages and dependencies.
+6. - [ ] Run `npm start` in your browser to start the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Testing ⚙️
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> I used [Jest](https://jestjs.io/) testing tool and react testing library to test functions by creating several test cases and snapshots. Please follow below steps to run Jest testing tool:
 
-## Learn More
+1. - [ ] Open `Terminal` again
+2. - [ ] Run `cd daily_meal` to enter directory
+3. - [ ] Run `npm test` to start testing
+4. - [ ] All tests will pass ✅
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 👨‍💻 Khalil Hamdi
 
-### Code Splitting
+[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/khalilhamdii) <br>
+[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/khalilhamdi/) <br>
+[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:khaalil.hamdi@gmail.com) <br>
+[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/Khalilhamdiii)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### 🤝 Contributing
 
-### Analyzing the Bundle Size
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Feel free to check the [issues page](https://github.com/khalilhamdii/MyTodos).
 
-### Making a Progressive Web App
+### Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+### License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking?color=red&style=for-the-badge)
