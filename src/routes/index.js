@@ -13,7 +13,6 @@ import { mealsStateToProps } from '../helpers/index';
 const Routes = (props) => {
   useEffect(() => {
     const { meals } = props;
-    console.log(Object.keys(meals));
     if (meals.length === 0) {
       const urls = [];
 
@@ -57,20 +56,20 @@ const Routes = (props) => {
 };
 
 Routes.propTypes = {
-  meals: PropTypes.shape([
-    {
+  meals: PropTypes.arrayOf(
+    PropTypes.shape({
       idMeal: PropTypes.string,
       strMeal: PropTypes.string,
       strCategory: PropTypes.string,
       strArea: PropTypes.string,
       strMealThumb: PropTypes.string,
-    },
-  ]),
+    }),
+  ),
   addMeals: PropTypes.func,
 };
 
 Routes.defaultProps = {
-  meals: {},
+  meals: [],
   addMeals: (meals) => ({
     type: 'ADD_MEALS',
     payload: { meals },

@@ -51,15 +51,15 @@ const Meals = (props) => {
 };
 
 Meals.propTypes = {
-  meals: PropTypes.shape([
-    {
+  meals: PropTypes.arrayOf(
+    PropTypes.shape({
       idMeal: PropTypes.string,
       strMeal: PropTypes.string,
       strCategory: PropTypes.string,
       strArea: PropTypes.string,
       strMealThumb: PropTypes.string,
-    },
-  ]),
+    }),
+  ),
   filter: PropTypes.shape({
     category: PropTypes.string,
     area: PropTypes.string,

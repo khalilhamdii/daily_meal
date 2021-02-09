@@ -77,15 +77,15 @@ const Recipe = (props) => {
 };
 
 Recipe.propTypes = {
-  meals: PropTypes.shape([
-    {
+  meals: PropTypes.arrayOf(
+    PropTypes.shape({
       idMeal: PropTypes.string,
       strMeal: PropTypes.string,
       strCategory: PropTypes.string,
       strArea: PropTypes.string,
       strMealThumb: PropTypes.string,
-    },
-  ]),
+    }),
+  ),
   match: PropTypes.shape({ params: PropTypes.shape({ id: PropTypes.string }) }),
 };
 
